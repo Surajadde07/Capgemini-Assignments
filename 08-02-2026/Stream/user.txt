@@ -1,0 +1,3 @@
+Name: cd "c:\Users\suraj\OneDrive\Desktop\Capgemini Assignments\08-02-2026\Stream\" ; if ($?) { javac WordFrequency.java } ; if ($?) { java WordFrequency }
+Age: cd "c:\Users\suraj\OneDrive\Desktop\Capgemini Assignments\08-02-2026\Javaeight\" ; if ($?) { javac BiFunctionDemo.java } ; if ($?) { java BiFunctionDemo }
+Language: cd "c:\Users\suraj\OneDrive\Desktop\Capgemini Assignments\08-02-2026\Javaeight\" ; if ($?) { javac BookRecommendations.java } ; if ($?) { java BookRecommendations }
