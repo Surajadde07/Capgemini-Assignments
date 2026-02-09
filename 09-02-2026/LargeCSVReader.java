@@ -1,0 +1,31 @@
+
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class LargeCSVReader {
+    public static void main(String[] args) {
+        String csvFile = "c:/Users/suraj/OneDrive/Desktop/Capgemini Assignments/09-02-2026/students.csv";
+        int chunkSize = 2;
+        int count = 0;
+
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+            br.readLine();
+            String line;
+            while (true) {
+                int linesInChunk = 0;
+                while (linesInChunk < chunkSize && (line = br.readLine()) != null) {
+                    count++;
+                    linesInChunk++;
+                }
+                if (linesInChunk == 0)
+                    break;
+                System.out.println("Processed " + count + " records so far...");
+            }
+            System.out.println("Finished processing " + count + " records.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
